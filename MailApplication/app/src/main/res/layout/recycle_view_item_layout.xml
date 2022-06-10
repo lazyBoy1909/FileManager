@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:layout_weight="7">
+    android:layout_height="70dp"
+    android:orientation="horizontal">
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_gravity="center">
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/avatar"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
             android:background="@drawable/round_view"
-            android:layout_marginTop="50dp"
-            android:textSize="36dp"
+            android:layout_margin="10sp"
+            android:textSize="20sp"
             android:text="S"
             android:textAlignment="center">
         </TextView>
@@ -23,38 +24,67 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="7"
-        android:orientation="vertical">
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:layout_marginLeft="10sp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@color/white">
             <TextView
+                android:id="@+id/sender_mail"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
                 android:text = ">> Eduria.com"
-                android:textSize="35dp">
+                android:textSize="15sp">
             </TextView>
             <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="12:34 AM"
+                android:textAlignment="textEnd">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text = "This is a title from Edurica"
+                android:textSize="15dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/content"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="12:34 AM"
-                android:layout_weight="5">
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:background="@color/white">
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:background="@color/white">
+                android:layout_weight="9"
+                android:text="This is content from Edurica"
+                android:textSize="15dp"></TextView>
+
+            <ImageView
+                android:id="@+id/interest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src = "@drawable/star">
+            </ImageView>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

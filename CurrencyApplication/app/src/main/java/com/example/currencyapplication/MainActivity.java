@@ -43,17 +43,23 @@ public class MainActivity extends AppCompatActivity implements KeyboardAdapter.I
     {
         try {
             Double res = Double.parseDouble(working);
+            Spinner workingSpinner;
+            Spinner resultSpinner;
             if(workingTextView == (TextView) findViewById(R.id.firstValue))
             {
-                Spinner workingSpinner = findViewById(R.id.firstSpinner);
-                String working = (String) workingSpinner.getSelectedItem();
-
-                Spinner resultSpinner = findViewById(R.id.secondSpinner);
-                String result = (String) resultSpinner.getSelectedItem();
-
-                Double value = currencyRate.get(result) / currencyRate.get(working) * res;
-                resultTextView.setText(value.toString());
+                workingSpinner = findViewById(R.id.firstSpinner);
+                resultSpinner = findViewById(R.id.secondSpinner);
             }
+            else
+            {
+                workingSpinner = findViewById(R.id.secondSpinner);
+                resultSpinner = findViewById(R.id.firstSpinner);
+            }
+            String working = (String) workingSpinner.getSelectedItem();
+            String result = (String) resultSpinner.getSelectedItem();
+
+            Double value = currencyRate.get(result) / currencyRate.get(working) * res;
+            resultTextView.setText(value.toString());
         }
         catch (NumberFormatException e)
         {
