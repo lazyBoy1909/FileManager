@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pathFile"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="22dp"
+            android:textColor="@color/cardview_light_background"
+            android:text="File path"
+            android:textAlignment="center"
+            android:background="@color/design_default_color_on_secondary">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Back">
+
+            </Button>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/file_list_view"
+            android:layout_weight="11"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/design_default_color_background">
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>
